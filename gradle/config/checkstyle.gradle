@@ -1,0 +1,29 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    toolVersion = '8.16'
+}
+
+task checkstyle(type: Checkstyle) {
+    group = 'verification'
+    ignoreFailures = true
+    configFile file("${project.rootDir}/gradle/config/checkstyle/checkstyle.xml")
+    configProperties = ['suppressionFile': "${project.rootDir}/gradle/config/checkstyle/suppressions.xml"]
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        html {
+            enabled true
+            destination file("$project.buildDir/reports/checkstyle/checkstyle.html")
+        }
+        xml {
+            enabled true
+            destination file("$project.buildDir/reports/checkstyle/checkstyle.xml")
+        }
+    }
+
+    classpath = files()
+}

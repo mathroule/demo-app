@@ -1,0 +1,18 @@
+android {
+    testOptions {
+        animationsDisabled true
+
+        unitTests {
+            includeAndroidResources true
+            all {
+                forkEvery 10
+                maxParallelForks 4
+                testLogging {
+                    events 'skipped', 'failed', 'standardOut', 'standardError'
+                    outputs.upToDateWhen { false }
+                    showStandardStreams true
+                }
+            }
+        }
+    }
+}

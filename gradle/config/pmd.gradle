@@ -1,0 +1,23 @@
+apply plugin: 'pmd'
+
+task pmd(type: Pmd) {
+    group = 'verification'
+    ignoreFailures = true
+    ruleSetFiles = files("${project.rootDir}/gradle/config/pmd/pmd-ruleset.xml")
+    ruleSets = []
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        html {
+            enabled true
+            destination file("$project.buildDir/reports/pmd/pmd.html")
+        }
+        xml {
+            enabled true
+            destination file("$project.buildDir/reports/pmd/pmd.xml")
+        }
+    }
+}

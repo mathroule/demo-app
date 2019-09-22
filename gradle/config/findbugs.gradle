@@ -1,0 +1,24 @@
+apply plugin: 'findbugs'
+
+task findbugs(type: FindBugs) {
+    group = 'verification'
+    ignoreFailures = true
+    effort = 'max'
+    reportLevel = 'medium'
+    excludeFilter = new File("${project.rootDir}/gradle/config/findbugs/findbugs-filter.xml")
+    classes = files("${project.buildDir}/intermediates/javac/debug/compileDebugJavaWithJavac/classes")
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        html.enabled false
+        xml {
+            enabled true
+            destination file("$project.buildDir/reports/findbugs/findbugs.xml")
+        }
+    }
+
+    classpath = files()
+}
