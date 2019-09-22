@@ -1,12 +1,12 @@
 apply plugin: 'checkstyle'
 
 checkstyle {
-    toolVersion = '8.16'
+    toolVersion '8.16'
 }
 
 task checkstyle(type: Checkstyle) {
-    group = 'verification'
-    ignoreFailures = true
+    group 'verification'
+    ignoreFailures true
     configFile file("${project.rootDir}/gradle/config/checkstyle/checkstyle.xml")
     configProperties = ['suppressionFile': "${project.rootDir}/gradle/config/checkstyle/suppressions.xml"]
 

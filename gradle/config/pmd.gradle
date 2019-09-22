@@ -1,8 +1,8 @@
 apply plugin: 'pmd'
 
 task pmd(type: Pmd) {
-    group = 'verification'
-    ignoreFailures = true
+    group 'verification'
+    ignoreFailures true
     ruleSetFiles = files("${project.rootDir}/gradle/config/pmd/pmd-ruleset.xml")
     ruleSets = []
 
