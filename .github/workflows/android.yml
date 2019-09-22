@@ -17,6 +17,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Check with danger
-      uses: mathoule/danger@master
+      uses: mathroule/danger@master
     - name: Build with Gradle
       run: ./gradlew build
