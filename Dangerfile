@@ -29,3 +29,9 @@ end
 junit.parse "app/build/test-results/testDebugUnitTest/*.xml"
 junit.show_skipped_tests = true
 junit.report
+
+# Android Lint
+android_lint.gradle_task = 'testReleaseUnitTest'
+android_lint.filtering = true
+android_lint.lint(inline_mode: true)
+android_lint.lint
