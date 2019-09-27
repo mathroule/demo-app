@@ -1,9 +1,0 @@
-workflow "Dangerfile Eval" {
-  on = "pull_request"
-  resolves = "Danger"
-}
-
-action "Danger" {
-  uses = "mathroule/danger@master"
-  secrets = ["GITHUB_TOKEN"]
-}

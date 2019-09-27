@@ -1,4 +1,0 @@
-action "Danger" {
-   uses = "danger/danger@master"
-   secrets = ["GITHUB_TOKEN"]
-}
