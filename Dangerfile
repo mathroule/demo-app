@@ -23,11 +23,6 @@ if git.commits.any? { |c| c.message =~ /^Merge branch/ }
   fail('Please rebase to get rid of the merge commits in this PR')
 end
 
-# Ensure test are not failing
-#junit.parse "app/build/test-results/testDebugUnitTest/*.xml"
-#junit.show_skipped_tests = true
-#junit.report
-#
 # AndroidLint
 android_lint.gradle_task = 'lintRelease'
 android_lint.report_file = 'app/build/reports/lint/lint-results.xml'
@@ -41,3 +36,8 @@ checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
 findbugs.gradle_task = 'findbugs'
 findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
 findbugs.report
+
+# JUnit tests
+junit.parse 'app/build/test-results/testReleaseUnitTest/*.xml'
+junit.show_skipped_tests = true
+junit.report
