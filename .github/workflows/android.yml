@@ -22,6 +22,7 @@ jobs:
       run: ./gradlew testReleaseUnitTest
     - name: Check with Gradle
       run: ./gradlew testReleaseUnitTest checkstyle
+      uses: bitrise-io/android@master
 
     - name: Check with danger
       uses: mathroule/danger@master
