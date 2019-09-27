@@ -14,14 +14,12 @@ jobs:
 #    - uses: wip/action@master
 
     - uses: actions/checkout@v1
-
-#    - name: set up JDK 1.8
-#      uses: actions/setup-java@v1
-#      with:
-#        java-version: 1.8
+    - name: set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
     - name: Checkstyle with Gradle
-       run: ./gradlew checkstyle
-      uses: bitriseio/android@master
+      run: ./gradlew checkstyle
 
     - name: Check with danger
       uses: mathroule/danger@master
