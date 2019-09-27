@@ -28,8 +28,12 @@ end
 #junit.show_skipped_tests = true
 #junit.report
 #
-## Android Lint
-#android_lint.gradle_task = 'testReleaseUnitTest'
-#android_lint.filtering = true
-#android_lint.lint(inline_mode: true)
-#android_lint.lint
+
+# Checkstyle
+checkstyle_format.base_path = Dir.pwd
+checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
+
+# AndroidLint
+android_lint.gradle_task = 'lintRelease'
+android_lint.report_file = 'app/build/reports/lint/lint-results.xml'
+android_lint.lint(inline_mode: true)
