@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.button).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.button).setOnClickListener( new OnClickListener() {
             @Override
             public void onClick(final View view) {
                 Snackbar.make(view, "Button clicked", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                            .setAction("Action", null).show();
             }
         });
     }
@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
+        else {
+            return super.onOptionsItemSelected(item);
+        }
     }
 }
