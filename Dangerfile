@@ -6,7 +6,6 @@ declared_trivial = github.pr_title.include? "#trivial"
 warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 
 if github.pr_title =~ /[A-Z]+-[0-9]+:/
-    warn("PR is classed as Work in Progress")
     auto_label.wip=(github.pr_json["number"])
 else
     warn("PR label does not match pattern 'DEMO-123: PR label'")
@@ -52,9 +51,6 @@ findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
 findbugs.report
 
 # JUnit tests
-result_files = Dir['app/build/test-results/testReleaseUnitTest/*.xml']
-message Dir['app/build/test-results/testReleaseUnitTest/*.xml']
-message result_files
-#junit.parse_files result_files
-#junit.show_skipped_tests = true
-#junit.report
+junit.parse_files Dir['app/build/test-results/testReleaseUnitTest/*.xml']
+junit.show_skipped_tests = true
+junit.report
