@@ -33,9 +33,9 @@ checkstyle_format.base_path = Dir.pwd
 checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
 
 # Findbugs
-findbugs.gradle_task = 'findbugs'
-findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
-findbugs.report
+#findbugs.gradle_task = 'findbugs'
+#findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
+#findbugs.report
 
 # JUnit tests
 junit.parse 'app/build/test-results/testReleaseUnitTest/*.xml'
