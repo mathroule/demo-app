@@ -33,6 +33,10 @@ if git.commits.any? { |c| c.message =~ /^Merge branch/ }
   fail('Please rebase to get rid of the merge commits in this PR')
 end
 
+# APK stats
+apkstats.apk_filepath = 'app/build/outputs/apk/release/app-release-unsigned.apk'
+apkstats.compare_with('sample/app-release-unsigned.apk', do_report: true)
+
 # AndroidLint
 android_lint.gradle_task = 'lintRelease'
 android_lint.report_file = 'app/build/reports/lint/lint-results.xml'
