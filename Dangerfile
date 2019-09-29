@@ -53,6 +53,8 @@ findbugs.report
 
 # JUnit tests
 result_files = Dir['app/build/test-results/testReleaseUnitTest/*.xml']
-junit.parse_files result_files
-junit.show_skipped_tests = true
-junit.report
+message Dir['app/build/test-results/testReleaseUnitTest/*.xml']
+message result_files
+#junit.parse_files result_files
+#junit.show_skipped_tests = true
+#junit.report
