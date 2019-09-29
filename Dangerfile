@@ -29,8 +29,8 @@ android_lint.report_file = 'app/build/reports/lint/lint-results.xml'
 android_lint.lint(inline_mode: true)
 
 # Checkstyle
-checkstyle_format.base_path = Dir.pwd
-checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
+#checkstyle_format.base_path = Dir.pwd
+#checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
 
 # Findbugs
 findbugs.gradle_task = 'findbugs'
