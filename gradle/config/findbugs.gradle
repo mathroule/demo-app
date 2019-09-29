@@ -6,7 +6,7 @@ task findbugs(type: FindBugs) {
     effort 'max'
     reportLevel 'medium'
     excludeFilter file("${project.rootDir}/gradle/config/findbugs/findbugs-filter.xml")
-    classes = files("${project.buildDir}/intermediates/javac/debug/classes")
+    classes = files("${project.buildDir}/intermediates/javac/release/classes")
 
     source 'src'
     include '**/*.java'
