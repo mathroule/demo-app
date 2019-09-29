@@ -38,6 +38,6 @@ checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
 #findbugs.report
 
 # JUnit tests
-junit.parse 'app/build/test-results/testReleaseUnitTest/*.xml'
-junit.show_skipped_tests = true
-junit.report
+#junit.parse 'app/build/test-results/testReleaseUnitTest/*.xml'
+#junit.show_skipped_tests = true
+#junit.report
