@@ -15,7 +15,7 @@ end
 warn("Big PR") if git.lines_of_code > 500
 
 # Make it more obvious that a PR is a work in progress and shouldn't be merged yet
-fail("PR has invalid name") if github.pr_title.include? "[WIP]"
+warn("PR has invalid name") if github.pr_title.include? "[WIP]"
 
 # Add a CHANGELOG entry for app changes
 #if !git.modified_files.include?("CHANGELOG.md") && has_app_changes
