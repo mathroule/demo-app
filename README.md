@@ -1,5 +1,5 @@
-# demo-app
-Demo App
+# Demo App
+Demo Android app with PR checks.
 
 # Checks
 * Danger
