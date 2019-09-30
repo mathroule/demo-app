@@ -5,12 +5,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ((Button)  findViewById(R.id.buton)).setText("Button #"+new Random().nextInt());
         findViewById (R.id.buton).setOnClickListener(new OnClickListener( ) {
             @Override
             public void onClick(final View view) {
