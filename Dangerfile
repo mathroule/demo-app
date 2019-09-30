@@ -1,9 +1,7 @@
 # Make it more obvious that a PR is a work in progress and shouldn't be merged yet
 warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 
-if github.pr_title =~ /[A-Z]+-[0-9]+:/
-    auto_label.wip=(github.pr_json["number"])
-else
+if !(github.pr_title =~ /[A-Z]+-[0-9]+:/)
     fail("PR has invalid name and does not match pattern 'DEMO-123: PR label'")
 end
 
@@ -11,7 +9,7 @@ end
 warn("Big PR") if git.lines_of_code > 500
 
 # Ensure a clean commits history
-if git.commits.any? { |c| c.message =~ /^Merge branch/ }
+if git.commits.any? { |commit| commit.message =~ /^Merge branch/ }
   fail('Please rebase to get rid of the merge commits in this PR')
 end
 
