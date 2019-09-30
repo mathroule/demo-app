@@ -34,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         try {
-            ((Button) findViewById(R.id.buton)).setText("Button #" + new Random().nextInt());
+            String text = "Button #" + new Random().nextInt();
+            ((Button) findViewById(R.id.buton)).setText(text);
+
+            if (text == "something") {
+                ((Button) findViewById(R.id.buton)).setText("something");
+            }
         } catch (Exception e) {
         }
         findViewById (R.id.buton).setOnClickListener(new OnClickListener( ) {
