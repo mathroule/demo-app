@@ -15,9 +15,6 @@ sonarqube {
 
         property 'sonar.import_unknown_files', true
 
-        property 'sonar.host.url', System.getenv('SONAR_HOST_URL')
-        property 'sonar.login', System.getenv('SONAR_LOGIN')
-
         property 'sonar.import_unknown_files', true
 
         property 'sonar.android.lint.report', "$project.buildDir/reports/lint/lint-result.xml"
