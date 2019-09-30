@@ -63,7 +63,7 @@ textlint.max_severity = 'warn'
 textlint.lint
 
 # Todoist
-todoist.message = "Please fix all TODOs"
+todoist.message = 'Please fix all TODOs'
 todoist.warn_for_todos
 todoist.print_todos_table
 

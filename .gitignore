@@ -67,3 +67,6 @@ fastlane/readme.md
 
 # Node
 node_modules/
+
+# Ruby
+vendor/bundle/
