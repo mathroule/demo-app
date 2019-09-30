@@ -1,0 +1,25 @@
+{
+  "name": "demoapp",
+  "version": "1.0.0",
+  "description": "Demo App",
+  "main": "index.js",
+  "dependencies": {
+    "dictionary-en-us": "^2.1.1",
+    "textlint": "^11.3.1",
+    "textlint-rule-spelling": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathroule/demo-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathroule/demo-app/issues"
+  },
+  "homepage": "https://github.com/mathroule/demo-app#readme"
+}

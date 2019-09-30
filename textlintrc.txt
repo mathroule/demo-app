@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "spelling": {
+            "language": "en-us"
+        }
+    }
+}
