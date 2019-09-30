@@ -33,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ((Button)  findViewById(R.id.buton)).setText("Button #"+new Random().nextInt());
+        try {
+            ((Button) findViewById(R.id.buton)).setText("Button #" + new Random().nextInt());
+        } catch (Exception e) {
+        }
         findViewById (R.id.buton).setOnClickListener(new OnClickListener( ) {
             @Override
             public void onClick(final View view) {
