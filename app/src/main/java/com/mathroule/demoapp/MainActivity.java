@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View view) {
-                Snackbar.make(view, "Button clicked", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                // TODO call the button clicked action
             }
         });
     }

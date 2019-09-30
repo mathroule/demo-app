@@ -36,10 +36,13 @@ end
 apkstats.apk_filepath = 'app/build/outputs/apk/release/app-release-unsigned.apk'
 apkstats.compare_with('sample/app-release-unsigned.apk', do_report: true)
 
-# AndroidLint
+# Android lint
 android_lint.gradle_task = 'lintRelease'
 android_lint.report_file = 'app/build/reports/lint/lint-results.xml'
 android_lint.lint(inline_mode: true)
+
+# Commit lint
+commit_lint.check
 
 # Checkstyle
 checkstyle_format.base_path = Dir.pwd
@@ -55,3 +58,18 @@ message Dir['app/build/test-results/testReleaseUnitTest/*.xml']
 #junit.parse_files Dir['app/build/test-results/testReleaseUnitTest/*.xml']
 #junit.show_skipped_tests = true
 #junit.report
+
+# Linear history
+linear_history.validate!
+
+# Textlint
+textlint.max_severity = 'warn'
+textlint.lint
+
+# Todoist
+todoist.message = "Please fix all TODOs"
+todoist.warn_for_todos
+todoist.print_todos_table
+
+# LGTM
+lgtm.check_lgtm
