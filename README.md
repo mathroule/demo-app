@@ -1,5 +1,5 @@
 # Demo App
-Demo Android app with PR [Danger](https://danger.systems/ruby) and [SonarQube](https://sonarcloud.io) checks 
+Demo Android app with PR [Danger](https://danger.systems/ruby) and [SonarQube](https://sonarcloud.io) checks. 
 
 # Executed checks
 * PR classed as Work in Progress
