@@ -15,8 +15,6 @@ sonarqube {
 
         property 'sonar.import_unknown_files', true
 
-        property 'sonar.import_unknown_files', true
-
         property 'sonar.android.lint.report', "$project.buildDir/reports/lint/lint-result.xml"
         property 'sonar.jacoco.xmlReportPaths', "$project.buildDir/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
         property 'sonar.junit.reportsPath', "$project.buildDir/test-results/testDebugUnitTest"
