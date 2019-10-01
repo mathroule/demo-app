@@ -4,7 +4,9 @@ import java.util.Random;
 
 public class Helper {
 
-    public static String getRandomButtonLabel( ) {
-        return "Button #" + new Random().nextInt();
+    public static String PASSWORD = "password";
+
+    public static String getRandomButtonLabel() {
+        return "Button #" + new Random().nextInt() + " " + PASSWORD;
     }
 }
