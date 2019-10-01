@@ -46,9 +46,8 @@ checkstyle_format.base_path = Dir.pwd
 checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
 
 # Findbugs
-findbugs.skip_gradle_task = true
-findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
-findbugs.report
+#findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
+#findbugs.report
 
 # JUnit tests
 junit_result_files = Dir['app/build/test-results/testDebugUnitTest/*.xml', 'app/build/outputs/androidTest-results/connected/*.xml']
