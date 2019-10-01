@@ -5,6 +5,8 @@ apply from: "$project.rootDir/gradle/config/lint.gradle"
 apply from: "$project.rootDir/gradle/config/pmd.gradle"
 apply from: "$project.rootDir/gradle/config/sonarqube.gradle"
 
-task qualityCheck (type: GradleBuild, dependsOn: ['assembleRelease', 'checkstyle', 'findbugs', 'pmd', 'lintRelease', 'jacocoTestReport']) {
+task qualityCheck {
     group 'verification'
+    dependsOn 'assembleRelease', 'checkstyle', 'findbugs', 'pmd', 'lintRelease', 'testDebugUnitTest'
+    tasks.findByName('findbugs').mustRunAfter 'assembleRelease'
 }
