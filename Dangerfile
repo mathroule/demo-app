@@ -47,7 +47,6 @@ checkstyle_format.report 'app/build/reports/checkstyle/checkstyle.xml'
 
 # Findbugs
 findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
-findbugs.send_inline_comment
 findbugs.report
 
 # JUnit tests
