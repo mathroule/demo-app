@@ -13,8 +13,6 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.Random;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         try {
-            String text = "Button #" + new Random().nextInt();
+            String text = Helper.getRandomButtonLabel();
             ((Button) findViewById(R.id.buton)).setText(text);
 
             if (text == "something") {
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } catch (Exception e) {
         }
-        findViewById (R.id.buton).setOnClickListener(new OnClickListener( ) {
+        findViewById(R.id.buton).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View view) {
                 // TODO call the button clicked action
