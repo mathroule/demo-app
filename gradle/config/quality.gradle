@@ -7,6 +7,6 @@ apply from: "$project.rootDir/gradle/config/sonarqube.gradle"
 
 task qualityCheck {
     group 'verification'
-    dependsOn 'assembleRelease', 'checkstyle', 'findbugs', 'pmd', 'lintRelease', 'testDebugUnitTest'
+    dependsOn 'assembleRelease', 'checkstyle', 'findbugs', 'pmd', 'lintRelease', 'jacocoTestReport'
     tasks.findByName('findbugs').mustRunAfter 'assembleRelease'
 }
