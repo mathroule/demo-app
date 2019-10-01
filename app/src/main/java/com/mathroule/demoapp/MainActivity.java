@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             String text = Helper.getRandomButtonLabel();
-            ((Button) findViewById(R.id.buton)).setText(text);
+            setButonLable(text);
 
             if (text == "something") {
-                ((Button) findViewById(R.id.buton)).setText("something");
+                setButonLable("something");
             }
         } catch (Exception e) {
         }
@@ -46,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 // TODO call the button clicked action
             }
         });
+    }
+
+    private void setButonLable(@NonNull final String s) {
+        ((Button) findViewById(R.id.buton)).setText(s);
     }
 
     @Override
