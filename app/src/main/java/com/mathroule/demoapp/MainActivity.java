@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
             }else           if (text == "something-else") {
                 setButonLable(null);
             }
-
         } catch (Exception e) {
         }
         findViewById(R.id.buton).setOnClickListener(new OnClickListener() {
