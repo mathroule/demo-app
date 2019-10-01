@@ -50,8 +50,9 @@ findbugs.report_file = 'app/build/reports/findbugs/findbugs.xml'
 findbugs.report
 
 # JUnit tests
-message Dir['app/build/test-results/testReleaseUnitTest/*.xml']
-#junit.parse_files Dir['app/build/test-results/testReleaseUnitTest/*.xml']
+junit_result_files = Dir['app/build/test-results/testDebugUnitTest/*.xml', 'app/build/outputs/androidTest-results/connected/*.xml']
+message junit_result_files
+#junit.parse_files Dir['app/build/test-results/testDebugUnitTest/*.xml', 'app/build/outputs/androidTest-results/connected/*.xml']
 #junit.show_skipped_tests = true
 #junit.report
 
