@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/mathroule/danger-findbugs
+  revision: 91145d2344145bd7ac0729d07837a94573c3a944
+  specs:
+    danger-findbugs (0.0.6)
+      danger-plugin-api (~> 1.0)
+      oga (~> 2.10)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,9 +50,6 @@ GEM
       danger-plugin-api (~> 1.0)
     danger-commit_lint (0.0.7)
       danger-plugin-api (~> 1.0)
-    danger-findbugs (0.0.5)
-      danger-plugin-api (~> 1.0)
-      oga (~> 2.10)
     danger-junit (1.0.0)
       danger (> 2.0)
       ox (~> 2.0)
@@ -101,7 +106,7 @@ DEPENDENCIES
   danger-checkstyle_format
   danger-code_coverage
   danger-commit_lint
-  danger-findbugs
+  danger-findbugs (= 0.0.6)!
   danger-junit
   danger-lgtm
   danger-linear_history
