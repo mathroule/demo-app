@@ -4,3 +4,7 @@ apply from: "$project.rootDir/gradle/config/findbugs.gradle"
 apply from: "$project.rootDir/gradle/config/lint.gradle"
 apply from: "$project.rootDir/gradle/config/pmd.gradle"
 apply from: "$project.rootDir/gradle/config/sonarqube.gradle"
+
+task qualityCheck (type: GradleBuild, dependsOn: ['checkstyle', 'jacocoTestReport', 'pmd', 'lintRelease']) {
+    group 'verification'
+}

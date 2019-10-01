@@ -15,8 +15,10 @@ sonarqube {
 
         property 'sonar.import_unknown_files', true
 
-        property 'sonar.android.lint.report', "$project.buildDir/reports/lint/lint-result.xml"
-        property 'sonar.jacoco.xmlReportPaths', "$project.buildDir/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
+        property 'sonar.androidLint.reportPaths', "$project.buildDir/reports/lint/lint-results.xml"
+        property 'sonar.coverage.jacoco.xmlReportPaths', "$project.buildDir/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
+        property 'sonar.java.checkstyle.reportPaths', "$project.buildDir/reports/checkstyle/checkstyle.xml"
+        property 'sonar.java.pmd.reportPaths', "$project.buildDir/reports/pmd/pmd.xml"
         property 'sonar.junit.reportsPath', "$project.buildDir/test-results/testDebugUnitTest"
     }
 }
