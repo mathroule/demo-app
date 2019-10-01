@@ -4,7 +4,7 @@ task findbugs(type: FindBugs) {
     group 'verification'
     ignoreFailures true
     effort 'max'
-    reportLevel 'medium'
+    reportLevel 'low'
     excludeFilter file("${project.rootDir}/gradle/config/findbugs/findbugs-filter.xml")
     classes = files("${project.buildDir}/intermediates/javac/release/classes")
 
@@ -17,6 +17,7 @@ task findbugs(type: FindBugs) {
         xml {
             enabled true
             destination file("$project.buildDir/reports/findbugs/findbugs.xml")
+            withMessages true
         }
     }
 
