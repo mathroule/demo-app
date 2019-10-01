@@ -2,7 +2,6 @@ apply plugin: 'org.sonarqube'
 
 sonarqube {
     properties {
-        property 'sonar.organization', "$projectOrganization"
         property 'sonar.projectKey', "$projectGroupId:$projectArtifactId"
         property 'sonar.projectName', "$projectName"
         property 'sonar.projectVersion', "$projectVersion"
