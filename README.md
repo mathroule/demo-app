@@ -18,3 +18,6 @@ Demo Android app with PR [Danger](https://danger.systems/ruby) and [SonarQube](h
 * Textlint
 * Todoist
 * SonarQube
+
+# News
+I udpated the readme and made a typo.
