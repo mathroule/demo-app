@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
             if (text == "something") {
                 ((Button) findViewById(R.id.buton)).setText("something");
+            } else           if (text == "something-else") {
+                ((Button) findViewById(R.id.buton)).setText("something-else");
             }
         } catch (Exception e) {
         }
