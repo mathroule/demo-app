@@ -56,7 +56,7 @@ GEM
       danger (>= 2.0.0)
     danger-plugin-api (1.0.0)
       danger (> 2.0)
-    danger-pmd (0.0.1)
+    danger-pmd (0.0.2)
       danger-plugin-api (~> 1.0)
       oga (~> 2.10)
     danger-textlint (1.2.2)
