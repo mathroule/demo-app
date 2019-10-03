@@ -60,6 +60,11 @@ junit.report
 # Linear history
 linear_history.validate!
 
+# PMD
+pmd.gradle_task = 'pmd'
+pmd.report_file = 'app/build/reports/pmd/pmd.xml'
+pmd.report
+
 # Textlint
 textlint.max_severity = 'warn'
 textlint.lint
